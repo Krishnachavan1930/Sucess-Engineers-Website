@@ -43,9 +43,10 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ease-in-out transform hover:scale-105 ${isActive(item.path)
-                      ? "text-primary bg-primary/10 shadow-sm"
-                      : "text-muted-foreground hover:text-primary hover:bg-accent/50 hover:shadow-sm"
+                  className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ease-in-out
+                    ${isActive(item.path)
+                      ? "text-red-600"
+                      : "text-gray-500 hover:text-red-600"
                     }`}
                 >
                   {item.name}
@@ -91,9 +92,10 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ease-in-out ${isActive(item.path)
-                    ? "text-primary bg-primary/10 shadow-sm border-l-4 border-primary"
-                    : "text-muted-foreground hover:text-primary hover:bg-accent/50 hover:shadow-sm hover:translate-x-1"
+                className={`block px-4 py-3 text-base font-medium transition-colors duration-200 ease-in-out
+                  ${isActive(item.path)
+                    ? "text-red-600"
+                    : "text-gray-500 hover:text-red-600"
                   }`}
                 onClick={() => setIsOpen(false)}
               >

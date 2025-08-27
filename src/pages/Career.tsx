@@ -32,7 +32,7 @@ const Career = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary/10 to-primary/5 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,7 +41,7 @@ const Career = () => {
               Join Our Team
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Be part of something extraordinary. Discover career opportunities 
+              Be part of something extraordinary. Discover career opportunities
               that will challenge and inspire you to grow.
             </p>
           </div>
@@ -56,7 +56,7 @@ const Career = () => {
               Why Work With Us?
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardContent className="p-6 text-center">
@@ -64,21 +64,21 @@ const Career = () => {
                 <p className="text-muted-foreground">Continuous learning and career advancement</p>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardContent className="p-6 text-center">
                 <h3 className="text-lg font-semibold text-foreground mb-2">Work-Life Balance</h3>
                 <p className="text-muted-foreground">Flexible hours and remote work options</p>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardContent className="p-6 text-center">
                 <h3 className="text-lg font-semibold text-foreground mb-2">Great Benefits</h3>
                 <p className="text-muted-foreground">Comprehensive health and wellness packages</p>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardContent className="p-6 text-center">
                 <h3 className="text-lg font-semibold text-foreground mb-2">Innovation Culture</h3>
@@ -100,7 +100,7 @@ const Career = () => {
               Explore our available positions and find your next career opportunity.
             </p>
           </div>
-          
+
           <div className="space-y-6">
             {jobOpenings.map((job, index) => (
               <Card key={index}>
@@ -133,7 +133,7 @@ const Career = () => {
             Don't See the Right Role?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            We're always looking for talented individuals. Send us your resume 
+            We're always looking for talented individuals. Send us your resume
             and we'll keep you in mind for future opportunities.
           </p>
           <Button size="lg">
