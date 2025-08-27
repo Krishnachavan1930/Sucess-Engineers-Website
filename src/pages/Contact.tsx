@@ -67,7 +67,7 @@ const Contact = () => {
                   />
                 </div>
                 
-                <Button className="w-full" size="lg">
+                <Button className="w-full bg-red-600 hover:bg-red-700 text-white" size="lg">
                   Send Message
                 </Button>
               </CardContent>

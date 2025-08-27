@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar"
 import MissionVision from "@/components/MissionVision"
 import CompaniesBranding from "@/components/CompaniesBranding"
-import Footer from "@/components/Footer"
+
 
 export default function Page() {
   return (
@@ -157,8 +157,7 @@ export default function Page() {
   <MissionVision />
   {/* Companies Branding Section */}
   <CompaniesBranding />
-  {/* Footer Section */}
-  <Footer />
+ 
     </div>
   )
 }

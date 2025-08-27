@@ -114,7 +114,7 @@ const Career = () => {
                         <Badge variant="outline">{job.type}</Badge>
                       </div>
                     </div>
-                    <Button>Apply Now</Button>
+                    <Button className="bg-red-600 hover:bg-red-700 text-white">Apply Now</Button>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -136,7 +136,7 @@ const Career = () => {
             We're always looking for talented individuals. Send us your resume
             and we'll keep you in mind for future opportunities.
           </p>
-          <Button size="lg">
+          <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
             Submit Your Resume
           </Button>
         </div>
