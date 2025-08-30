@@ -30,9 +30,9 @@ export default function Footer() {
           <div>
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">Contact</h3>
             <ul className="text-sm space-y-2">
-              <li><span className="font-semibold">Email:</span> info@sucessengineers.com</li>
-              <li><span className="font-semibold">Phone:</span> +91 9876543210</li>
-              <li><span className="font-semibold">Address:</span> Pimpri, Pune, Maharashtra, India</li>
+              <li><span className="font-semibold">Email:</span> info@successengineers.in</li>
+              <li><span className="font-semibold">Phone:</span> +91 97666 31728</li>
+              <li><span className="font-semibold">Address:</span> SUCCESS ENGINEERS, J-56, Block S, BHOSARI MIDC, Pune - 411026</li>
             </ul>
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mt-8 mb-4">Newsletter</h3>
             <form className="flex items-center gap-2 pt-2">
