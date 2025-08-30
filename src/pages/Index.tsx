@@ -153,11 +153,11 @@ export default function Page() {
           </div>
         </div>
       </section>
-  {/* Mission & Vision Section */}
-  <MissionVision />
-  {/* Companies Branding Section */}
-  <CompaniesBranding />
- 
+      {/* Mission & Vision Section */}
+      <MissionVision />
+      {/* Companies Branding Section */}
+      <CompaniesBranding />
+
     </div>
   )
 }

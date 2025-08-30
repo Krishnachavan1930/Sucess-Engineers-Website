@@ -11,8 +11,11 @@ const About = () => {
       <section className="w-full h-[40vh] md:h-[50vh] lg:h-[50vh] relative flex items-center justify-center overflow-hidden">
         <img
           src="/sliderd.jpg"
+          srcSet="/sliderd.jpg 1200w, /slidera.jpg 800w, /sliderb.jpg 400w"
+          sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
           alt="About Us Banner"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
+          loading="lazy"
         />
         <div className="relative z-10 text-center bg-black/30 w-full py-10">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
@@ -55,7 +58,7 @@ const About = () => {
             </div>
             <div className="rounded-lg h-96 flex items-center justify-center overflow-hidden shadow-md">
               <img
-                src="/sliderb.jpg"   
+                src="/sliderb.jpg"
                 alt="Success Engineers Factory"
                 className="w-full h-full object-cover object-center"
               />

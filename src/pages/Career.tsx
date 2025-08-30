@@ -33,14 +33,19 @@ const Career = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary/10 to-primary/5 py-20">
+      {/* Hero Section with Banner Background */}
+      <style>{`
+        .career-banner-bg {
+          background: url('/Bannar2.jpg') center top/cover no-repeat;
+        }
+      `}</style>
+      <section className="career-banner-bg bg-gradient-to-r from-primary/10 to-primary/5 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Join Our Team
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-white text-muted-foreground max-w-3xl mx-auto">
               Be part of something extraordinary. Discover career opportunities
               that will challenge and inspire you to grow.
             </p>

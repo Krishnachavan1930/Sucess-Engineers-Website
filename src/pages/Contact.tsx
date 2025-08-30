@@ -11,16 +11,21 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary/10 to-primary/5 py-20">
+
+      {/* Hero Section with Banner Background */}
+      <style>{`
+        .contact-banner-bg {
+          background: url('/BANNAR1.jpg') center top/cover no-repeat;
+        }
+      `}</style>
+      <section className="contact-banner-bg bg-muted/50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Contact Us
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Get in touch with us. We'd love to hear from you and discuss 
+              Get in touch with us. We'd love to hear from you and discuss
               how we can help with your needs.
             </p>
           </div>
@@ -31,45 +36,60 @@ const Contact = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
             {/* Contact Form */}
             <Card>
               <CardHeader>
                 <CardTitle className="text-2xl">Send us a Message</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" placeholder="John" />
+              <CardContent>
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="firstName">First Name</Label>
+                      <Input id="firstName" name="firstName" placeholder="John" required />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName">Last Name</Label>
+                      <Input id="lastName" name="lastName" placeholder="Doe" required />
+                    </div>
                   </div>
+
                   <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" placeholder="Doe" />
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="john@example.com"
+                      required
+                    />
                   </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input id="subject" placeholder="How can we help you?" />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Tell us more about your inquiry..."
-                    className="min-h-32"
-                  />
-                </div>
-                
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white" size="lg">
-                  Send Message
-                </Button>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="subject">Subject</Label>
+                    <Input id="subject" name="subject" placeholder="How can we help you?" required />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Tell us more about your inquiry..."
+                      className="min-h-32"
+                      required
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    className="w-full bg-red-600 hover:bg-red-700 text-white"
+                    size="lg"
+                  >
+                    Send Message
+                  </Button>
+                </form>
               </CardContent>
             </Card>
 
@@ -80,7 +100,7 @@ const Contact = () => {
                   Get in Touch
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  We're here to help and answer any questions you might have. 
+                  We're here to help and answer any questions you might have.
                   We look forward to hearing from you.
                 </p>
               </div>
@@ -92,9 +112,9 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Address</h3>
                       <p className="text-muted-foreground">
-                        123 Business Street<br />
-                        Suite 100<br />
-                        City, State 12345
+                        SUCCESS ENGINEERS<br />
+                        J-56, Block S, BHOSARI MIDC,<br />
+                        Pune - 411026
                       </p>
                     </div>
                   </CardContent>
@@ -106,8 +126,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Phone</h3>
                       <p className="text-muted-foreground">
-                        +1 (555) 123-4567<br />
-                        +1 (555) 987-6543
+                        ITACT - SAGHER TIWARI<br />
+                        +91 97666 31728
                       </p>
                     </div>
                   </CardContent>
@@ -119,8 +139,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Email</h3>
                       <p className="text-muted-foreground">
-                        info@company.com<br />
-                        support@company.com
+                        info@successengineers.in
                       </p>
                     </div>
                   </CardContent>
@@ -147,7 +166,7 @@ const Contact = () => {
 
       {/* Map Section */}
       <section className="bg-muted/50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Find Us
@@ -156,9 +175,18 @@ const Contact = () => {
               Visit our office or reach out through any of the contact methods above.
             </p>
           </div>
-          
-          <div className="bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg h-96 flex items-center justify-center">
-            <p className="text-muted-foreground text-lg">Interactive Map Placeholder</p>
+
+          <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              title="Success Engineers Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.8907424586574!2d73.84908327496355!3d18.63586768249889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0d49a7e2bbf%3A0xabc1234567890!2sBhosari%20MIDC%2C%20Pune%20411026!5e0!3m2!1sen!2sin!4v1693133612345!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>
